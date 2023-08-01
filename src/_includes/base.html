@@ -6,10 +6,13 @@
     <meta name="description" content="It’s (j)ust (e)leventy and (t)ailwind … OK, and a few other things; it’s still really small though.">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
   </head>
   <body>
+    <header> {% include "header.html" %} </header>
     <main>
       {{ content | safe }}
     </main>
+    <footer> {% include "footer.html" %} </footer>
   </body>
 </html>
