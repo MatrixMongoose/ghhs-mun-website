@@ -1,20 +1,68 @@
 backend:
+  # Use netlify identity as backend
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-
-#folders
+  branch: master
+  ### enable below lines for github integration ###
+  # name: github
+  # repo: surjithctly/neat-starter
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
-  #team member cms
-  collections:
-  - name: teamMembers  # Collection name
-    label: Team Members # Collection label displayed in the CMS
-    folder: _team_members # The folder where the team member data will be stored (create this folder in your project)
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+# publish_mode: editorial_workflow
+collections:
+  - label: "Blog"
+    name: "blog"
+    folder: "src/posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Slugs will be auto-generated with date and title
-    fields: # Define the fields for each team member
-      - { name: title, label: Title, widget: string } # Team member's job title
-      - { name: name, label: Name, widget: string } # Team member's full name
-      - { name: bio, label: Bio, widget: textarea } # Team member's biography
-      - { name: photo, label: Photo, widget: image, required: false } # Team member's photo (optional)
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["Tags", "created", "from", "config.yml"]
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.yaml"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: false
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+      - label: "Quick Links"
+        name: "links"
+        file: "src/_data/quicklinks.yaml"
+        fields:
+          - label: Nav Items
+            name: links
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Description, name: desc, widget: string }
+      - label: "Meta Settings"
+        name: "settings"
+        file: "src/_data/settings.yaml"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Author, name: author, widget: string }
+          - { label: URL, name: url, widget: string }
