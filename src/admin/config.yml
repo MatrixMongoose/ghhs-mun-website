@@ -10,7 +10,7 @@ public_folder: "/static/img"
 collections:
 - name: teamMembers  # Collection name
   label: Team Members # Collection label displayed in the CMS
-  folder: _team_members # The folder where the team member data will be stored (create this folder in your project)
+  folder: _data/_team_members # The folder where the team member data will be stored (create this folder in your project)
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Slugs will be auto-generated with date and title
   fields: # Define the fields for each team member
