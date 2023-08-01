@@ -16,5 +16,5 @@ collections:
   fields: # Define the fields for each team member
     - { name: title, label: Title, widget: string } # Team member's job title
     - { name: name, label: Name, widget: string } # Team member's full name
-    - { name: bio, label: Bio, widget: textarea } # Team member's biography
+    - { name: bio, label: Bio, widget: string } # Team member's biography
     - { name: photo, label: Photo, widget: image, required: false } # Team member's photo (optional)
