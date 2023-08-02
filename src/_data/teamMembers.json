@@ -12,5 +12,10 @@
       "position": "CTO",
       "photo": "is-mun-photo.jpg"
     }
-  ]
+  ],
+  "name": "dfsdf",
+  "position": "dfsdfsdf",
+  "bio": "dsfsdf",
+  "photo": "/img/uploads/is-mun-photo.jpg",
+  "order": 1
 }
