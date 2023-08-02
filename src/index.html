@@ -9,19 +9,18 @@ title: Home
             <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Green Hope Model UN seeks to inspire, educate, and expose young adults to new ideas, experiences, & discomfort through means of public speaking, research, and debate.</p>
         </div> 
         <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-            {% set memberList = collections.teamMember %}
-            
+            {% set memberList = teamMembers.team %}
             {% for member in memberList %}
             <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="{{ member.data.photo }}" alt="{{ member.data.name }}">
+                    <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="{{ member.photo }}" alt="{{ member.name }}">
                 </a>
                 <div class="p-5">
                     <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        <a href="#">{{ member.data.name }}</a>
+                        <a href="#">{{ member.name }}</a>
                     </h3>
-                    <span class="text-gray-500 dark:text-gray-400">{{ member.data.title }}</span>
-                    <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">{{ member.data.bio }}</p>
+                    <span class="text-gray-500 dark:text-gray-400">{{ member.position }}</span>
+                    <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">{{ member.bio }}</p>
                 </div>
             </div> 
             {% endfor %}
