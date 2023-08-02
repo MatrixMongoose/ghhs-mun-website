@@ -10,13 +10,25 @@ public_folder: "/img"
 collections:
 - name: teamMembers  # Collection name
   label: Team Members # Collection label displayed in the CMS
-  file: src/_data/teamMembers.json #The folder where the team member data will be stored (create this folder in your project)
-  create: true
-  identifier_field: name
-  fields: # Define the fields for each team member
-    - { name: title, label: Title, widget: string } # Team member's job title
-    - { name: name, label: Name, widget: string } # Team member's full name
-    - { name: bio, label: Bio, widget: string } # Team member's biography
-    - { name: photo, label: Photo, widget: image, required: false } # Team member's photo (optional)
+  files:
+    - label: "About Page"
+      name: "about"
+      file: "src/_data/teamMembers.json"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Intro, name: intro, widget: markdown}
+        - label: Team
+          name: team
+          widget: list
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Position, name: position, widget: string}
+            - {label: Photo, name: photo, widget: image}
+
+    #- { name: title, label: Title, widget: string } # Team member's job title
+    #- { name: name, label: Name, widget: string } # Team member's full name
+    #- { name: bio, label: Bio, widget: string } # Team member's biography
+    #- { name: photo, label: Photo, widget: image, required: false } # Team member's photo (optional)
 
 #     - { name: listOrder, label: "List Order", widget: string } # Team member's display order
+
