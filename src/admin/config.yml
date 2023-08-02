@@ -28,7 +28,7 @@ collections:
     #- { name: title, label: Title, widget: string } # Team member's job title
     #- { name: name, label: Name, widget: string } # Team member's full name
     #- { name: bio, label: Bio, widget: string } # Team member's biography
-    #- { name: photo, label: Photo, widget: image, required: false } # Team member's photo (optional)
+    #x`- { name: photo, label: Photo, widget: image, required: false } # Team member's photo (optional)
 
 #     - { name: listOrder, label: "List Order", widget: string } # Team member's display order
 
