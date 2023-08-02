@@ -3,8 +3,8 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 #folders
-media_folder: "src/static/img"
-public_folder: "/static/img"
+media_folder: "src/img/uploads"
+public_folder: "/img"
 
 #team member cms
 collections:
