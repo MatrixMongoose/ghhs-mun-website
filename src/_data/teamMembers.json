@@ -1,0 +1,16 @@
+{
+  "title": "qqwe",
+  "intro": "a﻿dadad",
+  "team": [
+    {
+      "name": "Ishaan Subhash",
+      "position": "Vice President",
+      "photo": "/img/is-mun-photo.jpg"
+    },
+    {
+      "name": "Subhash P",
+      "position": "CTO",
+      "photo": "/img/is-mun-photo.jpg"
+    }
+  ]
+}
