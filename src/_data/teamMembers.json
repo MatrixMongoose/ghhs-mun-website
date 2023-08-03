@@ -1,16 +1,18 @@
 {
-  "title": "qqwe",
-  "intro": "a﻿dadad",
-  "team": [
+  "members": [
+    {
+      "name": "Sanjana Juvvadi",
+      "position": "President",
+      "bio": "",
+      "order": 1,
+      "photo": "/img/uploads/no-content-photo.jpg"
+    },
     {
       "name": "Ishaan Subhash",
       "position": "Vice President",
-      "photo": "/img/uploads/is-mun-photo.jpg"
-    },
-    {
-      "name": "Subhash P",
-      "position": "CTO",
-      "photo": "is-mun-photo.jpg"
+      "bio": "",
+      "photo": "/img/uploads/is-mun-photo.jpg",
+      "order": 2
     }
   ]
 }

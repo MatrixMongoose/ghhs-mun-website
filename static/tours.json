@@ -1,0 +1,14 @@
+{
+  "tourList": [
+    {
+      "date": "2023-08-02T21:53:06.449Z",
+      "totalPlaces": -2,
+      "filledPlaces": 1
+    },
+    {
+      "date": "2023-08-02T21:53:22.270Z",
+      "totalPlaces": 1,
+      "filledPlaces": 1
+    }
+  ]
+}

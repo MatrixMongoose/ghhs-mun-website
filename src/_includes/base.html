@@ -6,9 +6,8 @@
     <meta name="description" content="It’s (j)ust (e)leventy and (t)ailwind … OK, and a few other things; it’s still really small though.">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
   </head>
   <body>
     <header> {% include "header.html" %} </header>
@@ -17,6 +16,8 @@
     </main>
     <footer> {% include "footer.html" %} </footer>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
